@@ -1,0 +1,18 @@
+Celem tego zadania jest rozbudowanie istniej¹cego programu o funkcjê filtracji zawodników
+na podstawie kraju, z którego pochodz¹. 
+Po wybraniu kraju z listy rozwijanej, program powinien wyœwietliæ tylko zawodników z
+tego kraju oraz obliczyæ i wyœwietliæ ich œredni wzrost.
+
+Wymagania:
+
+    Program powinien wczytywaæ listê zawodników z wczeœniej zdefiniowanego Ÿród³a 
+    (plik)
+
+    Stwórz listê rozwijan¹ (ComboBox), która bêdzie zawieraæ wszystkie kraje, 
+    z których pochodz¹ zawodnicy. Lista krajów powinna byæ unikalna.
+
+    Po wybraniu kraju z listy rozwijanej, program powinien przefiltrowaæ i wyœwietliæ tylko
+    zawodników pochodz¹cych z tego kraju. 
+
+    Program powinien obliczyæ i wyœwietliæ œredni wzrost zawodników z wybranego kraju. 
+    Wynik powinien byæ wyœwietlony w czytelny sposób, np. w elemencie Label lub TextBox.
