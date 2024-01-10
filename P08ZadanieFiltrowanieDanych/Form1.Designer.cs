@@ -48,6 +48,7 @@
             this.cbKraje.Name = "cbKraje";
             this.cbKraje.Size = new System.Drawing.Size(241, 21);
             this.cbKraje.TabIndex = 1;
+            this.cbKraje.SelectedIndexChanged += new System.EventHandler(this.cbKraje_SelectedIndexChanged);
             // 
             // label1
             // 

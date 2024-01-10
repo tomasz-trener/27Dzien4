@@ -12,13 +12,26 @@ namespace P08ZadanieFiltrowanieDanych
 {
     public partial class Form1 : Form
     {
+        private readonly ManagerZawodnikow mz = new ManagerZawodnikow();
+
         public Form1()
         {
             InitializeComponent();
-            ManagerZawodnikow mz = new ManagerZawodnikow();
+            
             mz.WczytajZawodnikow();
             cbKraje.DataSource = mz.PodajKraje();
              
+        }
+
+        private void cbKraje_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string zaznaczonyKraj = (string)cbKraje.SelectedItem;
+
+            if (zaznaczonyKraj != null)
+            {
+                lbDane.DataSource = mz.PodajZawodnikow(zaznaczonyKraj);
+                lbDane.DisplayMember = "ImieNazwisko";
+            }
         }
     }
 }

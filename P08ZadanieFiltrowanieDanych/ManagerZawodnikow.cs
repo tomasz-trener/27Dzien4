@@ -71,5 +71,16 @@ namespace P08ZadanieFiltrowanieDanych
             return zawodnicy.ToArray();
 
         }
+
+        public double PodajSredniWzrost(string kraj)
+        {
+            Zawodnik[] zawodnicy = PodajZawodnikow(kraj);
+
+            double suma = 0;
+            foreach (var z in zawodnicy)
+                suma += z.Wzrost;
+
+            return suma / zawodnicy.Length;
+        }
     }
 }
