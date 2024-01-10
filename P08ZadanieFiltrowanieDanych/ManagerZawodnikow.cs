@@ -9,6 +9,7 @@ namespace P08ZadanieFiltrowanieDanych
 {
     internal class ManagerZawodnikow
     {
+        private Zawodnik[] zawodnicyCache;
         public Zawodnik[] WczytajZawodnikow()
         {
             string url = "http://tomaszles.pl/wp-content/uploads/2019/06/zawodnicy.txt";
@@ -38,7 +39,26 @@ namespace P08ZadanieFiltrowanieDanych
 
                 zawodnicy[i - 1] = z;
             }
+            zawodnicyCache = zawodnicy;
             return zawodnicy;
+        }
+
+        public string[] PodajKraje()
+        {
+
+            // unikam ponownego wczytania danych dzieki zastosowaniu cache'u
+            // Zawodnik[] zawodnicy = WczytajZawodnikow();
+
+            Zawodnik[] zawodnicy = zawodnicyCache;
+
+            if (zawodnicyCache == null)
+                throw new Exception("Najpierw wczytaj zawodnikow");
+
+            HashSet<string> kraje = new HashSet<string>();
+            foreach (var z in zawodnicyCache)
+                kraje.Add(z.Kraj);
+
+            return kraje.ToArray();
         }
     }
 }

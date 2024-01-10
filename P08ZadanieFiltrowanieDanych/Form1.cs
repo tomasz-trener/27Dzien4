@@ -15,6 +15,10 @@ namespace P08ZadanieFiltrowanieDanych
         public Form1()
         {
             InitializeComponent();
+            ManagerZawodnikow mz = new ManagerZawodnikow();
+            mz.WczytajZawodnikow();
+            cbKraje.DataSource = mz.PodajKraje();
+             
         }
     }
 }

@@ -28,13 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lbDane = new System.Windows.Forms.ListBox();
+            this.cbKraje = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // lbDane
+            // 
+            this.lbDane.FormattingEnabled = true;
+            this.lbDane.Location = new System.Drawing.Point(12, 51);
+            this.lbDane.Name = "lbDane";
+            this.lbDane.Size = new System.Drawing.Size(242, 225);
+            this.lbDane.TabIndex = 0;
+            // 
+            // cbKraje
+            // 
+            this.cbKraje.FormattingEnabled = true;
+            this.cbKraje.Location = new System.Drawing.Point(13, 24);
+            this.cbKraje.Name = "cbKraje";
+            this.cbKraje.Size = new System.Drawing.Size(241, 21);
+            this.cbKraje.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Kraj";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(288, 317);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbKraje);
+            this.Controls.Add(this.lbDane);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox lbDane;
+        private System.Windows.Forms.ComboBox cbKraje;
+        private System.Windows.Forms.Label label1;
     }
 }
 
