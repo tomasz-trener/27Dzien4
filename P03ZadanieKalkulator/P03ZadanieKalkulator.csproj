@@ -81,7 +81,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="zadanie.txt" />
+    <Content Include="kalkulator.png" />
+    <None Include="zadanie.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
