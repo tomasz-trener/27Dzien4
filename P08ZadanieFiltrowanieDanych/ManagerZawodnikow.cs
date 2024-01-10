@@ -58,7 +58,12 @@ namespace P08ZadanieFiltrowanieDanych
             foreach (var z in zawodnicyCache)
                 kraje.Add(z.Kraj);
 
-            return kraje.ToArray();
+            // konwersja HashSet do list aby móc sortować
+            List<string> posortowaneKraje = kraje.ToList();
+            posortowaneKraje.Sort(); // sortowanie alfabetycznie 
+           //posortowaneKraje.Reverse(); // ewentualnie mozna odwrócić kolekność 
+
+            return posortowaneKraje.ToArray();
         }
 
         public Zawodnik[] PodajZawodnikow(string kraj)
