@@ -31,6 +31,7 @@
             this.lbDane = new System.Windows.Forms.ListBox();
             this.cbKraje = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblRaport = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbDane
@@ -59,11 +60,21 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Kraj";
             // 
+            // lblRaport
+            // 
+            this.lblRaport.AutoSize = true;
+            this.lblRaport.Location = new System.Drawing.Point(13, 290);
+            this.lblRaport.Name = "lblRaport";
+            this.lblRaport.Size = new System.Drawing.Size(35, 13);
+            this.lblRaport.TabIndex = 3;
+            this.lblRaport.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 317);
+            this.ClientSize = new System.Drawing.Size(288, 353);
+            this.Controls.Add(this.lblRaport);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbKraje);
             this.Controls.Add(this.lbDane);
@@ -79,6 +90,7 @@
         private System.Windows.Forms.ListBox lbDane;
         private System.Windows.Forms.ComboBox cbKraje;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRaport;
     }
 }
 

@@ -31,6 +31,9 @@ namespace P08ZadanieFiltrowanieDanych
             {
                 lbDane.DataSource = mz.PodajZawodnikow(zaznaczonyKraj);
                 lbDane.DisplayMember = "ImieNazwisko";
+
+                double wzrost = mz.PodajSredniWzrost(zaznaczonyKraj);
+                lblRaport.Text = string.Format("Średni wzrost: {0:0.00} cm", wzrost);
             }
         }
     }
