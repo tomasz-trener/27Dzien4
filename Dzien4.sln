@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04AplikacjaZawodnicy", "P0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05PrzegladKontrolek", "P05PrzegladKontrolek\P05PrzegladKontrolek.csproj", "{CED0F320-388D-4FA1-AA3F-01893BFDC3F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06ZadaniePogoda", "P06ZadaniePogoda\P06ZadaniePogoda.csproj", "{2C4A9A6E-9E97-4164-B653-59AC6FF0012A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CED0F320-388D-4FA1-AA3F-01893BFDC3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CED0F320-388D-4FA1-AA3F-01893BFDC3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CED0F320-388D-4FA1-AA3F-01893BFDC3F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C4A9A6E-9E97-4164-B653-59AC6FF0012A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C4A9A6E-9E97-4164-B653-59AC6FF0012A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C4A9A6E-9E97-4164-B653-59AC6FF0012A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C4A9A6E-9E97-4164-B653-59AC6FF0012A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
