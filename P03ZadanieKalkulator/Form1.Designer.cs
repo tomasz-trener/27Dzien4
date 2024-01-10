@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCzysc = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnRownaSie = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -47,14 +47,15 @@
             this.txtWyswietlacz = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btnCzysc
             // 
-            this.button1.Location = new System.Drawing.Point(15, 220);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 52);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "C";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCzysc.Location = new System.Drawing.Point(15, 220);
+            this.btnCzysc.Name = "btnCzysc";
+            this.btnCzysc.Size = new System.Drawing.Size(56, 52);
+            this.btnCzysc.TabIndex = 0;
+            this.btnCzysc.Text = "C";
+            this.btnCzysc.UseVisualStyleBackColor = true;
+            this.btnCzysc.Click += new System.EventHandler(this.btnCzysc_Click);
             // 
             // button2
             // 
@@ -77,7 +78,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(201, 220);
+            this.button4.Location = new System.Drawing.Point(204, 104);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(56, 52);
             this.button4.TabIndex = 3;
@@ -87,7 +88,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(201, 162);
+            this.button5.Location = new System.Drawing.Point(204, 46);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(56, 52);
             this.button5.TabIndex = 7;
@@ -127,7 +128,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(201, 46);
+            this.button9.Location = new System.Drawing.Point(204, 162);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(56, 52);
             this.button9.TabIndex = 15;
@@ -167,7 +168,7 @@
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(201, 104);
+            this.button13.Location = new System.Drawing.Point(204, 220);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(56, 52);
             this.button13.TabIndex = 11;
@@ -233,7 +234,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnRownaSie);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCzysc);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -243,7 +244,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCzysc;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnRownaSie;
         private System.Windows.Forms.Button button4;

@@ -35,7 +35,22 @@ namespace P03ZadanieKalkulator
 
         private void btnRownaSie_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Kalkulator k = new Kalkulator();
+                double wynik = k.WykonajDzialanie(txtWyswietlacz.Text);
+                txtWyswietlacz.Text = Convert.ToString(wynik);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Bład", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
 
+        private void btnCzysc_Click(object sender, EventArgs e)
+        {
+            txtWyswietlacz.Clear();
         }
     }
 }
