@@ -73,8 +73,11 @@ namespace P08ZadanieFiltrowanieDanych
                 if (z.Kraj == kraj)
                     zawodnicy.Add(z);
 
-            return zawodnicy.ToArray();
 
+
+            Zawodnik[] zawPosortowani = zawodnicy.ToArray();
+            PosorotujZawodnikowPoNazwisku(zawPosortowani);
+            return zawPosortowani;
         }
 
         public double PodajSredniWzrost(string kraj)
@@ -86,6 +89,23 @@ namespace P08ZadanieFiltrowanieDanych
                 suma += z.Wzrost;
 
             return suma / zawodnicy.Length;
+        }
+
+        public void PosorotujZawodnikowPoNazwisku(Zawodnik[] posortowaniZawodnicy)
+        {
+            for (int i = 0; i < posortowaniZawodnicy.Length - 1; i++)
+            {
+                for (int j = 0; j < posortowaniZawodnicy.Length -i -1; j++)
+                {
+                    if (string.Compare(posortowaniZawodnicy[j].Nazwisko ,posortowaniZawodnicy[j+1].Nazwisko) >0)
+                    {
+                        // zamiana miejscami 
+                        Zawodnik temp = posortowaniZawodnicy[j];
+                        posortowaniZawodnicy[j] = posortowaniZawodnicy[j + 1];
+                        posortowaniZawodnicy[j + 1] = temp;
+                    }
+                }
+            }
         }
     }
 }
