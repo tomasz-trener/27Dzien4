@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P06ZadaniePogoda.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace P06ZadaniePogoda
 {
     public partial class Form1 : Form
     {
-        private const string sciezkaMiasta = "C:\\dane\\miasta.txt";
+        private /*const*/ string sciezkaMiasta = "C:\\dane\\miasta.txt";
 
         public Form1()
         {
@@ -48,6 +49,27 @@ namespace P06ZadaniePogoda
 
             lblRaport.Text = string.Format("Temperatura w mieście {0} wynosi {1} w jednostce {2}",
                 wybraneMiasto, temp, wybranaJednostka);
+
+            // Ustawienie obrazka 
+            ManagerPogody mpCelsjusz = new ManagerPogody(Jednostka.Celsjusz);
+            double tempCelsjusz = mpCelsjusz.PodajTemperature(wybraneMiasto);
+            if (tempCelsjusz < 0)
+                pbObrazek.Image = Resources.snow;
+            else if (tempCelsjusz < 11)
+                pbObrazek.Image = Resources.rain;
+            else
+                pbObrazek.Image = Resources.sun;
+        }
+
+        private void btnOtworzPlik_Click(object sender, EventArgs e)
+        {
+            ofdPliki.Filter = "Pliki tekstowe (*.txt)|*.txt|Pliki exe|*.exe";
+
+            if (ofdPliki.ShowDialog() == DialogResult.OK)
+            {
+                sciezkaMiasta= ofdPliki.FileName;
+                wczytajMiasta();
+            }
         }
     }
 }

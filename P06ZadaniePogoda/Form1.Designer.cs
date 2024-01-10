@@ -34,6 +34,10 @@
             this.rbFrenheit = new System.Windows.Forms.RadioButton();
             this.rbKelvin = new System.Windows.Forms.RadioButton();
             this.lblRaport = new System.Windows.Forms.Label();
+            this.pbObrazek = new System.Windows.Forms.PictureBox();
+            this.ofdPliki = new System.Windows.Forms.OpenFileDialog();
+            this.btnOtworzPlik = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pbObrazek)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPodajTemperature
@@ -96,11 +100,37 @@
             this.lblRaport.TabIndex = 5;
             this.lblRaport.Text = "label1";
             // 
+            // pbObrazek
+            // 
+            this.pbObrazek.Image = global::P06ZadaniePogoda.Properties.Resources.snow;
+            this.pbObrazek.Location = new System.Drawing.Point(12, 118);
+            this.pbObrazek.Name = "pbObrazek";
+            this.pbObrazek.Size = new System.Drawing.Size(100, 79);
+            this.pbObrazek.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbObrazek.TabIndex = 6;
+            this.pbObrazek.TabStop = false;
+            // 
+            // ofdPliki
+            // 
+            this.ofdPliki.FileName = "openFileDialog1";
+            // 
+            // btnOtworzPlik
+            // 
+            this.btnOtworzPlik.Location = new System.Drawing.Point(252, 16);
+            this.btnOtworzPlik.Name = "btnOtworzPlik";
+            this.btnOtworzPlik.Size = new System.Drawing.Size(105, 63);
+            this.btnOtworzPlik.TabIndex = 7;
+            this.btnOtworzPlik.Text = "Otwórz Plik";
+            this.btnOtworzPlik.UseVisualStyleBackColor = true;
+            this.btnOtworzPlik.Click += new System.EventHandler(this.btnOtworzPlik_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 193);
+            this.ClientSize = new System.Drawing.Size(369, 209);
+            this.Controls.Add(this.btnOtworzPlik);
+            this.Controls.Add(this.pbObrazek);
             this.Controls.Add(this.lblRaport);
             this.Controls.Add(this.rbKelvin);
             this.Controls.Add(this.rbFrenheit);
@@ -109,6 +139,7 @@
             this.Controls.Add(this.btnPodajTemperature);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pbObrazek)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,6 +153,9 @@
         private System.Windows.Forms.RadioButton rbFrenheit;
         private System.Windows.Forms.RadioButton rbKelvin;
         private System.Windows.Forms.Label lblRaport;
+        private System.Windows.Forms.PictureBox pbObrazek;
+        private System.Windows.Forms.OpenFileDialog ofdPliki;
+        private System.Windows.Forms.Button btnOtworzPlik;
     }
 }
 
