@@ -60,5 +60,16 @@ namespace P08ZadanieFiltrowanieDanych
 
             return kraje.ToArray();
         }
+
+        public Zawodnik[] PodajZawodnikow(string kraj)
+        {
+            List<Zawodnik> zawodnicy = new List<Zawodnik>();
+            foreach (var z in zawodnicyCache)
+                if (z.Kraj == kraj)
+                    zawodnicy.Add(z);
+
+            return zawodnicy.ToArray();
+
+        }
     }
 }
